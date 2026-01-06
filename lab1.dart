@@ -39,4 +39,27 @@ Write ternary statement to print “Teenager” if age is between 13 and
   int age = int.parse(stdin.readLineSync()!); // Replace with your age
   String result = (age >= 13 && age <= 19) ? "Teenager" : "Not Teenager";
   print(result);
+
+  // HOMEWORK5 Q3 :  Create a list of 7 names   Use where to find a names that starts with alphabet a and print them.
+   List<String> names = ['ashraf', 'Ail', 'arej',  'bader', 'ahsan'];
+  List<String> namesStartingWithA =
+      names.where(((name) => name.toLowerCase().startsWith('a'))).toList();
+  print(namesStartingWithA);
+
+
+   /*HOMEWORK5 Q4
+4. Create a map with name, address, age, country keys and store values to it. 
+Update country name to other country and print all keys and values. */
+  Map<String, dynamic> person = {
+    'name': 'Ashraf',
+    'address': 'Irbid, Jordan',
+    'age': 22,
+    'country': 'Jordan',
+  };
+  person['country'] = 'USA';
+person.forEach((key, value) {
+    print('$key: $value');
+  });
 }
+
+
